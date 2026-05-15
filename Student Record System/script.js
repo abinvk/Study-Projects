@@ -30,4 +30,29 @@ function addStudent(){
     } else {
         grade = "Fail";
     }
+
+    let student = {
+
+        name: name,
+
+        roll: roll,
+
+        marks: marks,
+        
+        grade: grade
+    };
+
+    students.push(student);
+
+    displayStudents();
+
+    clearInputs();
+
+    function displayStudents(){
+
+        let studentList = document.getElementById("studentList");
+
+        studentList.innerHTML = "";
+        
+    }
 }
