@@ -64,3 +64,31 @@ button:hover{
 .student-list{
     margin-top: 30px;
 }
+
+.student-card{
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.student-card:hover{
+    transform: translateY(-5px);
+}
+
+.student-card h2{
+    margin-bottom: 10px;
+    color: #00e5ff;
+}
+
+.student-card p{
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.delete-btn{
+    margin-top: 15px;
+    background: linear-gradient(to right,#ff416c,#ff4b2b);
+}
