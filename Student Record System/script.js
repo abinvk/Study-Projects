@@ -73,4 +73,31 @@ function addStudent(){
             `;
         }
     }
+
+
+    function deleteStudent(roll){
+
+        for(let i = 0; i < students.length; i++){
+
+            if(students[i].roll === roll){
+
+                students.splice(i, 1);
+
+                displayStudents();
+
+                return;
+            }
+
+    }
+}
+}
+
+         
+function clearInputs(){
+
+    document.getElementById("name").value = "";
+
+    document.getElementById("roll").value = "";
+
+    document.getElementById("marks").value = "";
 }
