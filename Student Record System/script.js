@@ -54,5 +54,23 @@ function addStudent(){
 
         studentList.innerHTML = "";
         
+        for(let i = 0; i < students.length; i++){
+
+            studentList.innerHTML += `
+
+            <div class="student-card">
+
+                <p><strong>Name:</strong> ${students[i].name}</p>
+                <p><strong>Roll:</strong> ${students[i].roll}</p>
+                <p><strong>Marks:</strong> ${students[i].marks}</p>
+                <p><strong>Grade:</strong> ${students[i].grade}</p>
+
+                <button class="delete-btn" onclick="deleteStudent(${students[i].roll})">
+                   Delete
+               </button>
+
+            </div>
+            `;
+        }
     }
 }
