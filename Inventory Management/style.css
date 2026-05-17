@@ -64,3 +64,22 @@ body{
     font-weight: bold;
 }
 
+.warning{
+    background:#7f1d1d;
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-bottom: 30px;
+}
+
+.form-container input{
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background:#1e293b;
+    color:white;
+}
