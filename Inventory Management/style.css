@@ -110,3 +110,16 @@ table{
     border-radius:20px;
     overflow:hidden;
 }
+
+th,td{
+    padding:18px;
+    text-align:left;
+}
+
+th{
+    background:#334155;
+}
+
+tr{
+    border-bottom:1px solid #334155;
+}
