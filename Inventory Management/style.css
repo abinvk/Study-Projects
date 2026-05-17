@@ -23,3 +23,17 @@ body{
     align-items: center;
     margin-bottom: 30px;
 }
+
+.navbar h1{
+    font-size: 32px;
+}
+
+.navbar input{
+    width: 300px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background:#1e293b;
+    color:white;
+}
