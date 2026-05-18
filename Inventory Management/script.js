@@ -28,5 +28,14 @@ function addProduct(){
         sold: Number(sold)
     }
 
+    if(editIndex === null){
+        products.push(product);
+    } else {
+        products[editIndex] = product;
+        editIndex = null;
+    }
 
+    saveDate();
+    clearInputs();
+    displayProducts();
 }
