@@ -14,6 +14,19 @@ function addProduct(){
     let sold = document.getElementById('sold').value;
 
     if(name === "" || category === "" || price === "" || quantity === "" || sold === ""){
-    
+
+        alert("Please Fill In All Fields");
+        return;
 }
+
+    let product = {
+        id: Date.now(),
+        name,
+        category,
+        price: Number(price),
+        quantity: Number(quantity),
+        sold: Number(sold)
+    }
+
+
 }
