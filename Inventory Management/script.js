@@ -141,5 +141,10 @@ function updateDashboard(){
     let totalQty = products.reduce((total,product)=>
     total + product.quantity,0
 );
+    document.getElementById("totalQuantity").innerText = totalQty;
+
+    let lowStock = products.fillter(product =>
+        product.quantity < 5
+    ).length;
 
 }
