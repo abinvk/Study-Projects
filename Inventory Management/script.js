@@ -70,11 +70,31 @@ function displayProducts(filteredProducts = products){
             <td>$${product.price.toFixed(2)}</td>
             <td>${product.quantity}</td>
             <td>${product.sold}</td>
+
+            <td>
+             
+            <span class="status ${statusClass}">
+            ${status}
+            </span>
+            </td>
+
+                <td>
+
+                <button 
+                class="action-btn delete"
+                onclick="deleteProduct(${index})"
+                >
+                Delete
+                </button>
+
+                </td>
            
             
            
         </tr>
         `;
     });
+
+    updateDashboard();
 }
 
