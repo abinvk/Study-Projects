@@ -39,3 +39,42 @@ function addProduct(){
     clearInputs();
     displayProducts();
 }
+
+function displayProducts(filteredProducts = products){
+
+    let productList = document.getElementById('productList');
+    productList.innerHTML = '';
+
+    filteredProducts.forEach((product, index) => {
+         
+        let status = "";
+
+        let statusClass = "";
+
+        if(product.quantity === 0){
+            status = "Out of Stock";
+            statusClass = "out-of-stock";
+
+        }else if(product.quantity < 5){
+            status = "Low Stock";
+            statusClass = "low-stock";
+        }else{
+            status = "In Stock";
+            statusClass = "in-stock";
+        }
+
+        productList.innerHTML += `
+        <tr>
+            <td>${product.name}</td>
+            <td>${product.category}</td>
+            <td>$${product.price.toFixed(2)}</td>
+            <td>${product.quantity}</td>
+            <td>${product.sold}</td>
+           
+            
+           
+        </tr>
+        `;
+    });
+}
+
