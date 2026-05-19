@@ -43,7 +43,7 @@ function addProduct(){
 function displayProducts(filteredProducts = products){
 
     let productList = document.getElementById('productList');
-    productList.innerHTML = '';
+    productList.innerHTML = "";
 
     filteredProducts.forEach((product, index) => {
          
