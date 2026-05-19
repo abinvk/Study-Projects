@@ -98,3 +98,38 @@ function displayProducts(filteredProducts = products){
     updateDashboard();
 }
 
+function deleteProduct(index){
+
+    products.splice(index, 1);
+
+    saveDate();
+
+    displayProducts();
+
+}
+
+function editProduct(index){
+
+    let product = products[index];
+
+    document.getElementById('name').value = product.name;
+    document.getElementById('category').value = product.category;
+    document.getElementById('price').value = product.price;
+    document.getElementById('quantity').value = product.quantity;
+    document.getElementById('sold').value = product.sold;
+
+    editIndex = index;
+}
+
+document.getElementById("search").addEventListener("keyup",function(){
+
+    let value = this.value.toLowerCase();
+
+    let filtered = products.filter(product =>
+        
+        product.name.toLowerCase().includes(value) ||
+        product.category.toLowerCase().includes(value)
+    );
+
+    displayProducts(filtered);
+}
