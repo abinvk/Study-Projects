@@ -136,15 +136,41 @@ document.getElementById("search").addEventListener("keyup",function(){
 
 function updateDashboard(){
 
-    let getElementById("totalProducts").innerText = products.length;
+    document.getElementById("totalProducts").innerText = products.length;
 
     let totalQty = products.reduce((total,product)=>
     total + product.quantity,0
 );
     document.getElementById("totalQuantity").innerText = totalQty;
 
-    let lowStock = products.fillter(product =>
+    let lowStock = products.filter(product =>
         product.quantity < 5
     ).length;
 
+    document.getElementById("lowStock").innerText = lowStock;
+    if(products.length > 0){
+        let mostSelling = [...products].sort((a,b)=>
+        b.sold - a.sold)[0];
+        document.getElementById("mostSelling").innerText = mostSelling.name;
+
+    }else{
+        document.getElementById("mostSelling").innerText = "-";
+    }
+
+}
+
+function clearInputs(){
+    document.getElementById('name').value = "";
+    document.getElementById('category').value = "";
+    document.getElementById('price').value = "";
+    document.getElementById('quantity').value = "";
+    document.getElementById('sold').value = "";
+}
+
+function saveDate(){
+
+    localStorage.setItem(
+        'products',
+         JSON.stringify(products)
+);
 }
