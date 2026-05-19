@@ -124,3 +124,52 @@ tr{
     border-bottom:1px solid #334155;
 }
 
+.status{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.instock{
+    background:green;
+}
+
+.low{
+    background:orange;
+}
+
+.out{
+    background:red;
+}
+
+.action-btn{
+    border:none;
+    padding:8px 14px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.delete{
+    background:red;
+    color:white;
+}
+
+.edit{
+    background:#f59e0b;
+    color:white;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .navbar input{
+        width:100%;
+    }
+
+}
