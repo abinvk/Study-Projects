@@ -132,4 +132,14 @@ document.getElementById("search").addEventListener("keyup",function(){
     );
 
     displayProducts(filtered);
+});
+
+function updateDashboard(){
+
+    let getElementById("totalProducts").innerText = products.length;
+
+    let totalQty = products.reduce((total,product)=>
+    total + product.quantity,0
+);
+
 }
