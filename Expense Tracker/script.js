@@ -25,9 +25,10 @@ function addExpense() {
     document.getElementById('amount').value = '';
 }
 
+
 function displayExpenses() {
 
-    let list = document.getElementById("expense-list");
+    let list = document.getElementById("expenseList");
 
     let balance = document.getElementById("balance");
 
@@ -35,14 +36,18 @@ function displayExpenses() {
 
     let total = 0;
 
-    expenses.forEach(item=>{
+    expenses.forEach(item => {
+
         total += item.amount;
 
-        list.innerHTML += `<div class="expense-item">
+        list.innerHTML += `
+        <div class="expense-item">
             <span>${item.title}</span>
-            <span>$${item.amount.toFixed(2)}</span>
-        </div>`;
-    })
+            <span>₹${item.amount.toFixed(2)}</span>
+        </div>
+        `;
 
-    balance.textContent = `$${total.toFixed(2)}`;
+    });
+
+    balance.textContent = `₹${total.toFixed(2)}`;
 }
