@@ -18,4 +18,31 @@ function addExpense() {
     };
 
     expenses.push(expense);
+
+    displayExpenses();
+
+    document.getElementById('title').value = '';
+    document.getElementById('amount').value = '';
+}
+
+function displayExpenses() {
+
+    let list = document.getElementById("expense-list");
+
+    let balance = document.getElementById("balance");
+
+    list.innerHTML = '';
+
+    let total = 0;
+
+    expenses.forEach(item=>{
+        total += item.amount;
+
+        list.innerHTML += `<div class="expense-item">
+            <span>${item.title}</span>
+            <span>$${item.amount.toFixed(2)}</span>
+        </div>`;
+    })
+
+    balance.textContent = `$${total.toFixed(2)}`;
 }
