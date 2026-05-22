@@ -1,5 +1,5 @@
-let form = document.querySelector("loginForm");
-let message = document.querySelector("message");
+let form = document.getElementById("loginForm");
+let message = document.getElementById("message");
 
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
