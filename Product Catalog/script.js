@@ -64,7 +64,6 @@ productDiv.innerHTML += `
 });
 
 }
-
 function filterProducts(){
 
 const searchValue =
