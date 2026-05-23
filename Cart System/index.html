@@ -7,7 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>cart system</h1>
+
+    <div clas="container">
+        <h1>Shopping Cart</h1>
+
+        <div class="products">
+
+            <div class="product">
+                <h3>iPhone</h3>
+                <p>$999.99</p>
+                <button onclick="addToCart('iPhone',50000)">Add to Cart</button>
+            </div>
+
+
+            <div class="product">
+                <h3>MacBook</h3>
+                <p>$1,299.99</p>
+                <button onclick="addToCart('MacBook',100000)">Add to Cart</button>
+            </div>
+
+
+        </div>
+
+        <h1>Cart</h1>
+        <div id="cart"></div>
+
+        <h3 id="total">Total: $0.00</h3>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
