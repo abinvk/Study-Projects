@@ -1,56 +1,104 @@
-const products =[
-    {
-        name:"iPhone 15",
-        price: 999,
-        category: "Mobiles",
-        image:"https://picsum.photos/200?1"
-    },
+const products = [
 
-    {
-        name:"Samsung Galaxy S21",
-        price: 899,
-        category: "Mobiles",
-        image:"https://picsum.photos/200?2"
-    },
+{
+name:"iPhone 15",
+price:80000,
+category:"Mobile",
+image:"https://picsum.photos/200?1"
+},
 
-    {
-        name:"MacBook Pro",
-        price: 1999,
-        category: "Laptops",
-        image:"https://picsum.photos/200?3"
-    },
+{
+name:"Samsung S25",
+price:70000,
+category:"Mobile",
+image:"https://picsum.photos/200?2"
+},
 
-    {
-        name:"Dell XPS 13",
-        price: 1499,
-        category: "Laptops",
-        image:"https://picsum.photos/200?4"
-    },
+{
+name:"MacBook",
+price:120000,
+category:"Laptop",
+image:"https://picsum.photos/200?3"
+},
 
-    {
-        mname:"Sony WH-1000XM4",
-        price: 349,
-        category: "Headphones",
-        image:"https://picsum.photos/200?5"
-    }
+{
+name:"Dell XPS",
+price:95000,
+category:"Laptop",
+image:"https://picsum.photos/200?4"
+},
+
+{
+name:"Apple Watch",
+price:30000,
+category:"Watch",
+image:"https://picsum.photos/200?5"
+}
+
 ];
 
-const productContainer = document.getElementById("product");
+const productDiv = document.getElementById("products");
 const search = document.getElementById("searchInput");
 const category = document.getElementById("category");
 
-function displayProducts(products){
-    productContainer.innerHTML = "";
+function displayProducts(items){
 
-    items.forEach(product => {
+productDiv.innerHTML="";
 
-        productDiv.innerHTML += `
-        <div class="cart">
-        <img src = ${product.image}">
-        <h2>${product.name}</h2>
-        <p class="price">${product.price}</p>
-        <p>${product.category}</p>
-        </div>
-        `;
-    });
+items.forEach(product=>{
+
+productDiv.innerHTML += `
+<div class="card">
+
+<img src="${product.image}">
+
+<h2>${product.name}</h2>
+
+<p class="price">₹${product.price}</p>
+
+<p>${product.category}</p>
+
+</div>
+`;
+
+});
+
 }
+
+function filterProducts(){
+
+const searchValue =
+search.value.toLowerCase();
+
+const categoryValue =
+category.value;
+
+const filtered = products.filter(product=>{
+
+const matchSearch =
+product.name.toLowerCase()
+.includes(searchValue);
+
+const matchCategory =
+categoryValue==="all" ||
+product.category===categoryValue;
+
+return matchSearch && matchCategory;
+
+});
+
+displayProducts(filtered);
+
+}
+
+search.addEventListener(
+"input",
+filterProducts
+);
+
+category.addEventListener(
+"change",
+filterProducts
+);
+
+displayProducts(products);
