@@ -21,7 +21,6 @@ alert(
 }
 
 
-
 const questions=[
 
 "What is HTML?",
