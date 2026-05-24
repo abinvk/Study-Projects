@@ -35,20 +35,48 @@
                 <div class="card">
                     <h3>Quiz Generator</h3>
                     <p id="quizQuestion">Click Generate</p>
+
+                    <button onclick="generateQuiz()">Generate</button>
+                </div>
+
+                <div class="card">
+                    <h3>Study Timer</h3>
+
+                    <h1 id="timer">25:00</h1>
+
+                    <button onclick="startTimer()">Start</button>
+                </div>
+
+                <div class="card">
+                    <h3>Progress</h3>
+
+                    <input type="range"
+                    id="progress"
+                    min="0"
+                    max="100"
+                    value="0">
+
+                    <p id="progressText">
+                        0%
+                    </p>
+                </div>
+
+                <div class="card chat">
+                    <h3>Chat Assistant</h3>
+
+                    <div id="messages"></div>
+
+                    <input type="text"
+                    id="message"
+                    placeholder="Ask something...">
+
+                    <button onclick="sendMessage()">Send</button>
                 </div>
             </div>
         </div>
-
-
-
     </div>
 
 
-
-
-
-
-    
     <script src="script.js"></script>
 </body>
 </html>
