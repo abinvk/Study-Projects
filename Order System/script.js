@@ -32,3 +32,4 @@ function showCart(){
         total=0
         showCart()
     }
+    
