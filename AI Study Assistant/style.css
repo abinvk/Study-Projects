@@ -64,3 +64,31 @@ min-height:100vh;
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(20px);
 }
+
+textarea,input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background:#4f46e5;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#messages{
+    height: 120px;
+    overflow:auto;
+    background: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius:10px;
+}
