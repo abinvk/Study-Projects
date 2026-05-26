@@ -76,14 +76,9 @@ time--;
 
 if(time<0){
 
-clearInterval(
-timer
-);
+clearInterval(timer);
 
-alert(
-"Time Up"
-);
-
+alert("Time Up");
 }
 
 },1000)
@@ -92,39 +87,23 @@ alert(
 
 
 
-document.getElementById(
-"progress"
-)
+document.getElementById("progress")
 
-.addEventListener(
-
-"input",
+.addEventListener("input",
 
 function(){
 
-document.getElementById(
-"progressText"
-).innerText=
-
-this.value+"%";
+document.getElementById("progressText").innerText=this.value+"%";
 
 }
 
 );
 
-
-
 function sendMessage(){
 
-let msg=
-document.getElementById(
-"message"
-);
+let msg=document.getElementById("message");
 
-let messages=
-document.getElementById(
-"messages"
-);
+let messages=document.getElementById("messages");
 
 messages.innerHTML+=
 
@@ -134,28 +113,18 @@ ${msg.value}</p>`;
 let reply=
 "Keep learning 🚀";
 
-if(
-msg.value.includes(
-"html"
-)
+if(msg.value.includes("html")
 )
 
-reply=
-"HTML creates structure";
+reply="HTML creates structure";
 
-if(
-msg.value.includes(
-"css"
-)
+if(msg.value.includes("css")
 )
 
-reply=
-"CSS designs webpage";
+reply="CSS designs webpage";
 
 if(
-msg.value.includes(
-"js"
-)
+msg.value.includes("js")
 )
 
 reply=
