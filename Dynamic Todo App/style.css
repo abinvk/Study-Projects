@@ -28,27 +28,27 @@ button{
 }
 
 li{
-     background-color: #eeeeee;
-      margin-top: 10px; 
-      padding: 10px;
-       list-style: none;
-        display: flex; 
-        justify-content: space-between;
-         align-items: center; 
-         border-radius: 5px; 
-        }
+    background-color: #eeeeee;
+    margin-top: 10px; 
+    padding: 10px;
+    list-style: none;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    border-radius: 5px; 
+}
 
-        .completed{ 
-            text-decoration: line-through; 
-            background-color: lightgreen; 
-        }
+.completed{ 
+    text-decoration: line-through; 
+    background-color: lightgreen; 
+}
 
-        .task-buttons button{
-             margin-left: 5px;
-             }
+.task-buttons button{
+    margin-left: 5px;
+}
 
 
-             #error{ 
-                color: red; 
-                margin-top: 10px;
-             }
+#error{ 
+    color: red; 
+    margin-top: 10px;
+}

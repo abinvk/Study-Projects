@@ -1,35 +1,26 @@
-
 // Input Box
 
 let taskInput = document.getElementById("taskInput");
-
 
 // Add Button
 
 let addBtn = document.getElementById("addBtn");
 
-
 // Task List
 
 let taskList = document.getElementById("taskList");
-
 
 // Task Count
 
 let count = document.getElementById("count");
 
-
 // Total Task Variable
 
 let totalTasks = 0;
 
-
-
 // Add Button Click
 
 addBtn.addEventListener("click", addTask);
-
-
 
 // Main Function
 
@@ -38,8 +29,6 @@ function addTask() {
     // Input Value Read
 
     let taskText = taskInput.value;
-
-
 
     // Empty Check
 
@@ -51,25 +40,17 @@ function addTask() {
 
     }
 
-
-
     // Create li
 
     let li = document.createElement("li");
-
-
 
     // Create paragraph
 
     let p = document.createElement("p");
 
-
-
     // Add text
 
     p.textContent = taskText;
-
-
 
     // Complete Button
 
@@ -77,15 +58,11 @@ function addTask() {
 
     completeBtn.textContent = "Complete";
 
-
-
     // Delete Button
 
     let deleteBtn = document.createElement("button");
 
     deleteBtn.textContent = "Delete";
-
-
 
     // Complete Button Click
 
@@ -94,9 +71,6 @@ function addTask() {
         li.classList.toggle("completed");
 
     });
-
-
-
 
     // Delete Button Click
 
@@ -110,9 +84,6 @@ function addTask() {
 
     });
 
-
-
-
     // Append Elements
 
     li.appendChild(p);
@@ -121,22 +92,13 @@ function addTask() {
 
     li.appendChild(deleteBtn);
 
-
-
-
     // Add li to ul
 
     taskList.appendChild(li);
 
-
-
-
     // Clear Input
 
     taskInput.value = "";
-
-
-
 
     // Count Increase
 
