@@ -8,14 +8,14 @@ let fontSize = 20;
 themeBtn.addEventListener("click", function(){
     document.body.classList.toggle("dark");
 
-    if (document.body.classList.condains("dark")){
+    if (document.body.classList.contains("dark")){
         document.title = "Dark Mode";
         themeBtn.innerText = "Light Mode";
 
         localStorage.setItem("theme", "dark");
 
 
-    } else {
+    }else{
         document.title = "Light";
         themeBtn.innerText = "Dark Mode";
 
