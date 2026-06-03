@@ -1,0 +1,30 @@
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+}
+
+.cotainer{
+    width: 500px;
+    margin:30px auto;
+}
+
+input{
+    width:70%;
+    padding:10px;
+}
+
+button{
+    padding:10px;
+    cursor:pointer;
+}
+
+.note{
+    background:white;
+    padding:10px;
+    margin-top:10px;
+    border-radius:5px;
+}
+
+.important{
+    background:yellow;
+}
