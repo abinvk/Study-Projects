@@ -57,4 +57,34 @@ addBtn.addEventListener("click", () => {
     })
 
     //Important
-})
+
+    importantBtn.addEventListener("click", () => {
+        if (note.classList.contains("important")){
+            note.classList.remove("important");
+        } 
+        else {
+            note.classList.add("important");
+        }
+    });
+
+    // Edit
+
+    editBtn.addEventListener("click", () => {
+        const newText = prompt("Edit your note:");
+        if (newText){
+            const newPara = document.createElement("p");
+            newPara.textContent = newText;
+
+            para.replaceWith(newPara);
+        }
+    });
+
+    // Clone
+
+    cloneBtn.addEventListener("click", () => {
+        const clonedNote = note.cloneNode(true);
+        notesContainer.prepend(clonedNote);
+    });
+});
+
+   
