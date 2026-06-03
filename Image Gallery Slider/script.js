@@ -20,3 +20,27 @@ function showImage(index) {
     });
     thumbnails[index].classList.add("active");
 }
+
+nextBtn.addEventListener("click", () =>{
+    currentIndex++;
+    if(currentIndex >= images.length){
+        currentIndex = 0;
+    }
+    showImage(currentIndex);
+});
+
+prevBtn.addEventListener("click", () =>{
+    currentIndex--;
+
+    if(currentIndex < 0){
+        currentIndex = images.length - 1;
+    }
+    showImage(currentIndex);
+});
+
+thumbnails.forEach((thumb, index) =>{
+    thumb.addEventListener("click", () =>{
+        currentIndex = index;
+        showImage(currentIndex);
+    });
+});
