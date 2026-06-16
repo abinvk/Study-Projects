@@ -13,15 +13,34 @@
         <button id="themeBtn">Dark Mode</button>
     </header>
 
+    <!-- Search -->
+
     <div class="container">
         <div class="card">
             <h2>Search filter</h2>
             <input type="text" id="searchinput" placeholder="Search Notes">
         </div>
-
-
-
         
+        <!-- Notes -->
+
+        <div class="card">
+            <h2>Notes</h2>
+            <textarea id="noteInput" placeholder="Write something..."></textarea>
+            <p>Characters: <span id="charCount">0</span></p>
+            <button id="addNotesBtn">Add Note</button>
+            <ul id="noteList"></ul>
+        </div>
+
+        <!-- Clock -->
+
+        <div class="card">
+            <h2>Digital Clock</h2>
+            <h1 id="clock">00:00:00</h1>
+            <p id="date"></p>
+        </div>
+
+
+
     </div>
     
     <script src="script.js"></script>
