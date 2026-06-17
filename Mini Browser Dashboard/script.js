@@ -56,3 +56,28 @@ setInterval(updateClock,1000);
 updateClock();
 
 // Stopwatch
+
+let seconds = 0;
+let timer;
+
+const stopwatch = document.getElementById("stopwatch");
+document.getElementById("startBtn").addEventListener("click",() => {
+    clearInterval(timer);
+    timer = setInterval(() => {
+        seconds++;
+
+        let hrs = Math.floor(seconds/3600);
+        let mins = Math.floor((seconds%3600)/60);
+        let secs = seconds%60;
+
+        stopwatch.textContent =
+        `${hrs}:${mins}:${secs}`;
+        
+    },1000);
+});
+
+document.getElementById("stopBtn").addEventListener("click", () => {
+    clearInterval(timer);
+    seconds = 0;
+    stopwatch.textContent = "00:00:00";
+});
