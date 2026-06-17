@@ -43,3 +43,16 @@ searchInput.addEventListener("keyup", () =>{
         }
     });
 });
+
+// Digital Clock
+
+function updateClock(){
+    const now = new Date();
+
+    document.getElementById("clock").textContent=
+    now.toDateString();
+}
+setInterval(updateClock,1000);
+updateClock();
+
+// Stopwatch
