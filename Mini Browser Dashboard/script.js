@@ -125,3 +125,15 @@ hoverBox.addEventListener("mouseleave", () => {
 })
 
 // Key Events
+
+const keyInput =
+document.getElementById("keyInput");
+
+const keyResult =
+document.getElementById("keyResult");
+keyInput.addEventListener("keydown",(e)=>{
+    keyResult.textContent =
+    "Pressed Key: " + e.key;
+});
+
+// Resize Event
