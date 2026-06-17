@@ -100,3 +100,14 @@ document.getElementById("countStart").addEventListener("click", () => {
 });
 
 // Password Toggle
+
+const password =
+document.getElementById("password");
+document.getElementById("togglePassword")
+.addEventListener("click", () => {
+    if(password.type === "password"){
+        password.type = "text";
+    }else{
+        password.type = "password";
+    }
+});
