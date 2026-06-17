@@ -137,3 +137,13 @@ keyInput.addEventListener("keydown",(e)=>{
 });
 
 // Resize Event
+
+function updateSize(){
+    document.getElementById("windowSize")
+    .textContent =
+    `${window.innerWidth} x ${window.innerHeight}`;
+}
+window.addEventListener("resize",updateSize);
+updateSize();
+
+// Scroll Event
