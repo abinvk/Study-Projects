@@ -154,3 +154,26 @@ window.addEventListener("scroll",()=>{
 });
 
 // Drag & Drop
+
+const dragItem =
+    document.getElementById("dragItem");
+
+const dropZone =
+    document.getElementById("dropZone");
+
+    dragItem.addEventListener("dragstart",(e)=>{
+    e.dataTransfer.setData("text","dragItem");
+    });
+
+dropZone.addEventListener("dragover",(e)=>{ 
+    e.preventDefault(); 
+});
+
+dropZone.addEventListener("drop",(e)=>{
+    e.preventDefault();
+    const data =
+    e.dataTransfer.getData("text");
+
+    dropZone.appendChild( 
+    document.getElementById(data));
+    });
