@@ -111,3 +111,17 @@ document.getElementById("togglePassword")
         password.type = "password";
     }
 });
+
+// Mouse Enter / Leave
+
+const hoverBox =
+document.getElementById("hoverBox");
+
+hoverBox.addEventListener("mouseenter", () => {
+    hoverBox.style.background = "lightgreen";
+});
+hoverBox.addEventListener("mouseleave", () => {
+    hoverBox.style.background = "white";
+})
+
+// Key Events
