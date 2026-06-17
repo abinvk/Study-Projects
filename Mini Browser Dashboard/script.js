@@ -147,3 +147,10 @@ window.addEventListener("resize",updateSize);
 updateSize();
 
 // Scroll Event
+
+window.addEventListener("scroll",()=>{
+    document.getElementById("scrollPosition")
+    .textContent = window.scrollY;
+});
+
+// Drag & Drop
