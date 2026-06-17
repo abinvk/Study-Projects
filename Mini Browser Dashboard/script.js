@@ -30,3 +30,16 @@ addNotesBtn.addEventListener("click", () => {
 });
 
 // Search Filter
+
+const searchInput = document.getElementById("searchInput");
+searchInput.addEventListener("keyup", () =>{
+    const filter = searchInput.value.toLowerCase();
+    const notes = document.querySelectorAll("#noteList li");
+    notes.forEach(note => {
+        if(note.textContent.toLowerCase().includes(filter)){
+            note.style.display = "block";
+        }else{
+            note.style.display = "none";
+        }
+    });
+});
