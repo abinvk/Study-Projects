@@ -81,3 +81,22 @@ document.getElementById("stopBtn").addEventListener("click", () => {
     seconds = 0;
     stopwatch.textContent = "00:00:00";
 });
+
+// Countdown Timer
+
+document.getElementById("countStart").addEventListener("click", () => {
+    let count =
+    Number(document.getElementById("countInput").value);
+    const display =
+    document.getElementById("countDisplay");
+    const countdown = setInterval(() => {
+        display.textContent = count;
+        count--;
+        if(count < 0){
+            clearInterval(countdown);
+            display.textContent = "Time Up";
+        }
+    },1000);
+});
+
+// Password Toggle
