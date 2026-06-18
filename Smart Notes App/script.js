@@ -96,3 +96,28 @@ notesContainer.addEventListener("click",(e)=>{
 });
 
 // Search Filter
+
+searchInput.addEventListener("keyup",()=>{
+
+    const value =
+    searchInput.value.toLowerCase();
+
+    const notes =
+    document.querySelectorAll(".note");
+
+    notes.forEach(note=>{
+        note.style.display =
+        note.textContent
+        .toLowerCase()
+        .includes(value)
+        ? "block"
+        : "none";
+
+    });
+});
+
+// Dark Mode
+
+themeBtn.addEventListener("click",()=>{
+    document.body.classList.toggle("dark");
+});
