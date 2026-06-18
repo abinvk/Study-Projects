@@ -6,3 +6,16 @@ const searchInput = document.getElementById("searchInput");
 const charCount = document.getElementById("charCount");
 const livePreview = document.getElementById("livePreview");
 const themeBtn = document.getElementById("themeBtn");
+
+let clickCounter = 0;
+
+// Character Counter
+
+text.addEventListener("input", () =>{
+    charCount.textContent =
+    text.value.length + "Characters";
+    livePreview.textContent =
+    text.value;
+});
+
+// Focus Event
