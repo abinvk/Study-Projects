@@ -118,3 +118,16 @@ button[type="submit"]{
     border-radius:8px;
     cursor:pointer;
 }
+
+.dark{
+    background:#111827;
+}
+
+.dark .container{
+    background:#1f2937;
+}
+
+.dark .note{
+    background:#374151;
+    color:white;
+}
