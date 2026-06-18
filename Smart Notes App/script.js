@@ -67,3 +67,32 @@ form.addEventListener("submit", (e) =>{
 });
 
 // Delete Note
+
+notesContainer.addEventListener("click",(e)=>{
+    if(e.target.classList.containes("delete")){
+        e.target.closest(".note").remove();
+    }
+});
+
+// Edit Note
+
+notesContainer.addEventListener("click",(e)=>{
+    if(e.target.classList.containes("edit")){
+
+        const note =
+        e.target.closest(".note");
+
+        const noteTitle =
+        note.querySelector("h3").textContent;
+
+        const noteText =
+        note.querySelector("p").textContent;
+
+        title.value = noteTitle;
+        text.value = noteText;
+
+        note.remove();
+    }
+});
+
+// Search Filter
