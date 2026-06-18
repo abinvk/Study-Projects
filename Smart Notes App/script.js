@@ -19,3 +19,51 @@ text.addEventListener("input", () =>{
 });
 
 // Focus Event
+
+text.addEventListener("focus", () => {
+    text.style.border = "2px solid green";
+});
+
+// Blur Event
+
+text.addEventListener("blur", () =>{
+    text.style.border = "none";
+});
+
+// Add Note
+
+form.addEventListener("submit", (e) =>{
+    e.preventDefault();
+    clickCounter++;
+
+    document.getElementById("clickCount")
+    .textContent =
+    "Add Clicks: " + clickCounter;
+
+    const note = document.createElement("div");
+    note.classList.add("note")
+
+    const date =
+    new Date().toLocaleDateString();
+    note.innerHTML = `
+    <h3>${title.value}</h3>
+    <p>${text.value}</p>
+    <small>${date}</small>
+
+    <div class="actions">
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+    </div>
+    `;
+
+    notesContainer.prepend(note);
+
+    title.value = "";
+    text.value = "";
+    livePreview.textContent =
+        "Live Preview...";
+    charCount.textContent =
+        "0 Characters";
+});
+
+// Delete Note
