@@ -109,3 +109,20 @@ input{
     background:#00c896;
     color:white;
 }
+
+.delete{
+    background:#ff4d4d;
+}
+
+.dark{
+    background:#111827;
+}
+
+.dark .container{
+    background:#1f2937;
+}
+
+.dark .task{
+    background:#374151;
+    color:white;
+}
