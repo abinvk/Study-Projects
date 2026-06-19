@@ -21,3 +21,17 @@ body{
     padding:25px;
     color:white;
 }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#themeBtn{
+    border: none;
+    padding:10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
