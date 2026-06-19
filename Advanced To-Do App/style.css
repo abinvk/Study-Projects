@@ -78,5 +78,34 @@ input{
     align-items: center;
     cursor: grab;
     transition: 3s;
-    
+}
+
+.task:hover{
+    transform: translateY(-3px);
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity:.6;
+}
+
+.task-info small{
+    color: gray;
+}
+
+.actions{
+    display: flex;
+    gap: 8px;
+}
+
+.actions button{
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer; 
+}
+
+.complete{
+    background:#00c896;
+    color:white;
 }
