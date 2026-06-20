@@ -56,4 +56,12 @@ addTaskBtn.addEventListener("click",()=>{
   </button>
   </div>
   `;
-})
+
+  taskContainer.prepend(task);
+  taskInput ="";
+  liveText.textContent =
+  "Task Previwe...";
+  addTaskBtn.disabled = true
+});
+
+// Complete & Delete
