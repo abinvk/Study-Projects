@@ -101,3 +101,29 @@ taskContainer.addEventListener(
   });
 
   // Dark Mode
+
+  themBtn.addEventListener("click",()=>{
+    document.body
+    .classList.toggle("dark");
+  });
+
+  // Drag & Drop
+
+  let darggedTask = null;
+  taskContainer.addEventListener("dragstart",(e)=>{
+    darggedTask = e.target;
+  });
+
+  taskContainer.addEventListener("dragover",(e)=>{
+    e.preventDefault();
+  });
+
+  taskContainer.addEventListener("drop",(e)=>{
+    e.preventDefault();
+
+    const target = e.target.closest(".task");
+
+    if(target && target !== darggedTask){
+      taskContainer.insertBefore(darggedTask,target); 
+    }
+  });
