@@ -65,3 +65,19 @@ addTaskBtn.addEventListener("click",()=>{
 });
 
 // Complete & Delete
+
+taskContainer.addEventListener(
+  "click",
+  (e)=>{
+    if(e.target.classList.contains("complete")){
+
+      e.target
+      .closest(".task")
+      .classList.toggle("completed");
+    }
+    if(e.target.classList.contains("delete")){
+      e.target
+      .closest(".task")
+      .remove();
+    }
+  });
