@@ -22,7 +22,7 @@ addTaskBtn.disabled = true;
 // Add Task
 
 addTaskBtn.addEventListener("click",()=>{
-    const taskText = taskInput.value.trime();
+    const taskText = taskInput.value.trime;
 
     if(taskText==="") return;
 
@@ -58,7 +58,7 @@ addTaskBtn.addEventListener("click",()=>{
   `;
 
   taskContainer.prepend(task);
-  taskInput ="";
+  taskInput.value = "";
   liveText.textContent =
   "Task Previwe...";
   addTaskBtn.disabled = true
