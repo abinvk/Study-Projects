@@ -81,3 +81,23 @@ taskContainer.addEventListener(
       .remove();
     }
   });
+
+  // Search Filter
+
+  searchInput.addEventListener("keyup",()=>{
+    const value = searchInput.value
+    .toLowerCase();
+
+    const tasks = document.querySelectorAll(".task");
+
+    tasks.forEach(task=>{
+      task.computedStyleMap.display =
+      task.textContent
+      .toLowerCase()
+      .includes(value)
+      ? "flex"
+      : "none";
+    });
+  });
+
+  // Dark Mode
