@@ -100,3 +100,15 @@ function validation(){
     submitBtn.disabled = !valid;
 }
 
+document.querySelectorAll("input")
+.forEach(input=>{
+    input.addEventListener("input",validateForm);
+});
+
+// Submit Event
+
+document.getElementById("registerFrom")
+.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    alert("Registration Successful");
+})
