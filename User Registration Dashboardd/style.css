@@ -39,3 +39,27 @@ input{
     outline: none;
     border-radius: 10px;
 }
+
+#togglePassword{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+small{
+    color: #ffcccb;
+    display: block;
+    margin-top: 5px;
+}
+
+#submitBtn:disabled{
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+#charCount{
+    margin-top: 10px;
+}
