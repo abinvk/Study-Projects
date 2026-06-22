@@ -7,6 +7,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="container">
+        <h1>User Registration</h1>
+
+        <form id="registration">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Full Name">
+                <small id="nameError"></small>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email Adress">
+                <small id="emailError"></small>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password">
+                <button type="button" id="togglePassword">Show</button>
+                <small id="passwordError"></small>
+            </div>
+
+            <div class="input-group"> 
+                <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                <small id="confirmError"></small>
+            </div>
+
+            <p id="charCount">0 Characters</p>
+
+            <button id="submitBtn" disabled>Register</button>
+
+
+        </form>
+    </div>
     <script src="script.js"></script>
 </body>
-</html>
+</htm>
