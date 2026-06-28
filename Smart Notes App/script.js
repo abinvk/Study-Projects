@@ -12,10 +12,8 @@ let clickCounter = 0;
 // Character Counter
 
 text.addEventListener("input", () =>{
-    charCount.textContent =
-    text.value.length + "Characters";
-    livePreview.textContent =
-    text.value;
+    charCount.textContent = text.value.length + "Characters";
+    livePreview.textContent = text.value;
 });
 
 // Focus Event
@@ -69,7 +67,7 @@ form.addEventListener("submit", (e) =>{
 // Delete Note
 
 notesContainer.addEventListener("click",(e)=>{
-    if(e.target.classList.containes("delete")){
+    if(e.target.classList.contains("delete")){
         e.target.closest(".note").remove();
     }
 });
@@ -77,7 +75,7 @@ notesContainer.addEventListener("click",(e)=>{
 // Edit Note
 
 notesContainer.addEventListener("click",(e)=>{
-    if(e.target.classList.containes("edit")){
+    if(e.target.classList.contains("edit")){
 
         const note =
         e.target.closest(".note");
