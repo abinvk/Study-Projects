@@ -58,3 +58,36 @@ button{
     font-weight: bold;
     transform: .3s;
 }
+
+#increase{
+    background: #00c853;
+    color:white;
+}
+
+#increase:hover{
+
+    transform:scale(1.08);
+
+}
+
+#decrease{
+    background: #ff1744;
+    color: white;
+}
+
+#decrease:hover{
+
+    transform:scale(1.08);
+
+}
+
+#reset{
+    background: #2979ff;
+    color: white;
+}
+
+#reset:hover{
+
+    transform:scale(1.08);
+    
+}
