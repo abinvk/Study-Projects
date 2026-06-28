@@ -8,6 +8,7 @@ let number = 0;
 
 function updateUI(){
     count.textContent = number;
+
     if(number > 0){
         statusText.textContent = "Positive 😊";
         count.style.color = "#00ff99";
@@ -29,5 +30,14 @@ function updateUI(){
         updateUI();
     });
 
-
+    decrease.addEventListener("click",()=>{
+        number--;
+        updateUI();
+    });
+ 
+    reset.addEventListener("click",()=>{
+        number = 0;
+        updateUI();
+    });
 }
+ updateUI();
