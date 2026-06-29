@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+}
