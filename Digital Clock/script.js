@@ -16,8 +16,8 @@ function updateClock(){
 
     hours.textContent = hr;
     minutes.textContent = min;
-    seconds.textContent = sec;
-
+   seconds.textContent = sec;
+ 
     date.textContent = now.toDateString()
 }
 updateClock();
